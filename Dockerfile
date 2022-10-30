@@ -45,6 +45,6 @@ RUN /tmp/install-tailscale.sh && rm -r /tmp/*
 USER root
 RUN chmod +x ./run-tailscale.sh
 #CMD ./run-tailscale.sh
-RUN ./run-tailscale.sh
+#RUN ./run-tailscale.sh
 ENTRYPOINT ["sh", "-c"]
 CMD ["/usr/local/bin/gotty --port ${PORT:-3000} --permit-write --reconnect /bin/bash"]
